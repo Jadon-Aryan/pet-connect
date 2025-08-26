@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites - PetConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1><i class="fas fa-paw"></i> PetConnect</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adoption.html">Find a Pet</a></li>
+                <li><a href="favorites.html" class="active">My Favorites <span id="fav-counter" class="fav-counter">0</span></a></li>
+                <li><a href="updates.html">Success Stories</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <h2>My Favorite Dogs</h2>
+            <p>Here are the dogs you've saved. You can remove them from this list by clicking the heart icon again.</p>
+        </section>
+
+        <div class="dog-grid" id="favorites-grid">
+            <p id="no-favorites-message" style="display: none;">You haven't saved any favorites yet. Start by clicking the heart icon on a dog's profile!</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 PetConnect. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="adoption-script.js"></script>
+</body>
+</html>

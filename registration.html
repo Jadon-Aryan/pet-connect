@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Dog Adoption Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Dog Adoption Portal</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adoption.html">Adoption Page</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
+                <li><a href="updates.html">Success Stories</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-section">
+        <h2>Create Your Account</h2>
+        <form class="registration-form">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <div class="placeholder-feature">CAPTCHA will be here</div>
+            <button type="button" class="btn-secondary">Send OTP</button>
+
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" name="otp">
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Register</button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Dog Adoption Portal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

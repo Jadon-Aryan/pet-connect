@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Pet - PetConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1><i class="fas fa-paw"></i> PetConnect</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adoption.html" class="active">Find a Pet</a></li>
+                <li><a href="favorites.html">My Favorites <span id="fav-counter" class="fav-counter">0</span></a></li>
+                <li><a href="updates.html">Success Stories</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="filters-container">
+            <h2>Find Your Perfect Companion</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="age-filter">Age:</label>
+                    <select id="age-filter">
+                        <option value="all">All Ages</option>
+                        <option value="puppy">Puppy</option>
+                        <option value="adult">Adult</option>
+                        <option value="senior">Senior</option>
+                    </select>
+                </div>
+                 <div class="filter-group">
+                    <label for="size-filter">Size:</label>
+                    <select id="size-filter">
+                        <option value="all">All Sizes</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="gender-filter">Gender:</label>
+                    <select id="gender-filter">
+                        <option value="all">Any Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="status-filter">Status:</label>
+                    <select id="status-filter">
+                        <option value="all">All Statuses</option>
+                        <option value="unadopted">Unadopted</option>
+                        <option value="adopted">Adopted</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="dog-grid" id="dog-grid">
+            <div class="dog-card" data-dog-id="1" data-age="puppy" data-size="medium" data-gender="male" data-status="unadopted">
+                <img src="images/dog1.png" alt="Dog named Sheru">
+                <div class="favorite-icon" data-dog-id="1"><i class="far fa-heart"></i></div>
+                <h3>Sheru</h3>
+                <ul class="dog-tags">
+                    <li>Male</li>
+                    <li>Puppy</li>
+                    <li>Medium</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Sheru">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="2" data-age="adult" data-size="large" data-gender="female" data-status="adopted">
+                <img src="images/dog2.png" alt="Dog named Kali">
+                <div class="favorite-icon" data-dog-id="2"><i class="far fa-heart"></i></div>
+                <h3>Kali</h3>
+                <ul class="dog-tags">
+                    <li>Female</li>
+                    <li>Adult</li>
+                    <li>Large</li>
+                </ul>
+                <button class="adopted-btn" disabled>Adopted</button>
+            </div>
+            <div class="dog-card" data-dog-id="3" data-age="puppy" data-size="small" data-gender="male" data-status="unadopted">
+                <img src="images/dog3.png" alt="Dog named Moti">
+                <div class="favorite-icon" data-dog-id="3"><i class="far fa-heart"></i></div>
+                <h3>Moti</h3>
+                <ul class="dog-tags">
+                    <li>Male</li>
+                    <li>Puppy</li>
+                    <li>Small</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Moti">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="4" data-age="senior" data-size="medium" data-gender="male" data-status="unadopted">
+                <img src="images/dog4.png" alt="Dog named Raja">
+                <div class="favorite-icon" data-dog-id="4"><i class="far fa-heart"></i></div>
+                <h3>Raja</h3>
+                <ul class="dog-tags">
+                    <li>Male</li>
+                    <li>Senior</li>
+                    <li>Medium</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Raja">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="5" data-age="adult" data-size="medium" data-gender="female" data-status="adopted">
+                <img src="images/dog5.png" alt="Dog named Bhuri">
+                <div class="favorite-icon" data-dog-id="5"><i class="far fa-heart"></i></div>
+                <h3>Bhuri</h3>
+                <ul class="dog-tags">
+                    <li>Female</li>
+                    <li>Adult</li>
+                    <li>Medium</li>
+                </ul>
+                <button class="adopted-btn" disabled>Adopted</button>
+            </div>
+            <div class="dog-card" data-dog-id="6" data-age="adult" data-size="large" data-gender="male" data-status="unadopted">
+                <img src="images/dog6.png" alt="Dog named Max">
+                <div class="favorite-icon" data-dog-id="6"><i class="far fa-heart"></i></div>
+                <h3>Max</h3>
+                <ul class="dog-tags">
+                    <li>Male</li>
+                    <li>Adult</li>
+                    <li>Large</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Max">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="7" data-age="puppy" data-size="small" data-gender="female" data-status="unadopted">
+                <img src="images/dog7.png" alt="Dog named Shadow">
+                <div class="favorite-icon" data-dog-id="7"><i class="far fa-heart"></i></div>
+                <h3>Shadow</h3>
+                <ul class="dog-tags">
+                    <li>Female</li>
+                    <li>Puppy</li>
+                    <li>Small</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Shadow">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="8" data-age="senior" data-size="large" data-gender="male" data-status="unadopted">
+                <img src="images/dog8.png" alt="Dog named Buddy">
+                <div class="favorite-icon" data-dog-id="8"><i class="far fa-heart"></i></div>
+                <h3>Buddy</h3>
+                <ul class="dog-tags">
+                    <li>Male</li>
+                    <li>Senior</li>
+                    <li>Large</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Buddy">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="9" data-age="adult" data-size="medium" data-gender="female" data-status="unadopted">
+                <img src="images/dog9.png" alt="Dog named Angel">
+                <div class="favorite-icon" data-dog-id="9"><i class="far fa-heart"></i></div>
+                <h3>Angel</h3>
+                <ul class="dog-tags">
+                    <li>Female</li>
+                    <li>Adult</li>
+                    <li>Medium</li>
+                </ul>
+                <button class="adopt-btn" data-dog-name="Angel">Inquire</button>
+            </div>
+            <div class="dog-card" data-dog-id="10" data-age="puppy" data-size="small" data-gender="male" data-status="adopted">
+                <img src="images/dog10.png" alt="Dog named Oreo">
+                <div class="favorite-icon" data-dog-id="10"><i class="far fa-heart"></i></div>
+                <h3>Oreo</h3>
+                <ul class="dog-tags">
+                    <li>Male</li>
+                    <li>Puppy</li>
+                    <li>Small</li>
+                </ul>
+                <button class="adopted-btn" disabled>Adopted</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="inquiry-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Adoption Inquiry</h2>
+            <form id="adoption-form">
+                <input type="hidden" id="dog-name-input" name="dogName">
+                <label for="user-name">Your Name:</label>
+                <input type="text" id="user-name" name="userName" required>
+                <label for="user-email">Your Email:</label>
+                <input type="email" id="user-email" name="userEmail" required>
+                <label for="user-phone">Your Phone:</label>
+                <input type="tel" id="user-phone" name="userPhone" required>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 PetConnect. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="adoption-script.js"></script>
+</body>
+</html>
